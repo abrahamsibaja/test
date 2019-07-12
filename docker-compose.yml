@@ -2,6 +2,7 @@ version: "2"
 services:
     caddy:
         image: abiosoft/caddy:latest
+        command: -ca
         ports:
             - "80:80"
             - "443:443"
@@ -10,5 +11,7 @@ services:
         volumes:
             - ./Caddyfile:/etc/Caddyfile # to mount custom Caddyfile
             - ./caddy:/etc/caddycerts
-    # certbot:
-    #     image: certbot/certbot
+        depends_on:
+            - web
+    web:
+        build: .
