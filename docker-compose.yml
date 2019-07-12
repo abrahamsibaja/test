@@ -11,7 +11,7 @@ services:
         volumes:
             - ./Caddyfile:/etc/Caddyfile # to mount custom Caddyfile
             - ./caddy:/etc/caddycerts
-        depends_on:
-            - web
-    web:
-        build: .
+    #     depends_on:
+    #         - web
+    # web:
+    #     build: .
