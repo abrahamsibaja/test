@@ -1,8 +1,7 @@
 *.hulilabs.xyz   # Your site's address
 
 tls {
-    ca https://acme-staging-v02.api.letsencrypt.org/directory
-    # max_certs 10
+    max_certs 10
 }
 
 ext .html   # Clean URLs

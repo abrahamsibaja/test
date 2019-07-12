@@ -2,7 +2,7 @@ version: "2"
 services:
     caddy:
         image: abiosoft/caddy:latest
-        # command: -ca
+        command: -ca https://acme-staging-v02.api.letsencrypt.org/directory
         ports:
             - "80:80"
             - "443:443"
