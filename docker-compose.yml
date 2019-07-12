@@ -2,15 +2,15 @@ version: "2"
 services:
     caddy:
         image: abiosoft/caddy:latest
-        command: -ca https://acme-staging-v02.api.letsencrypt.org/directory
+        # command: -ca https://acme-staging-v02.api.letsencrypt.org/directory
         ports:
             - "80:80"
             - "443:443"
-        environment:
-            - CADDYPATH:/etc/caddycerts
+        # environment:
+        #     - CADDYPATH:/etc/caddycerts
         volumes:
             - ./Caddyfile:/etc/Caddyfile # to mount custom Caddyfile
-            - ./caddy:/etc/caddycerts
+            # - ./caddy:/etc/caddycerts
     #     depends_on:
     #         - web
     # web:
