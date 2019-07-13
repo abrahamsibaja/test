@@ -1,7 +1,7 @@
-*.hulilabs.xyz   # Your site's address
+*.xyz   # Site's address
 
-tls {
-    max_certs 10
+tls abraham.sibaja@hulilabs.com {
+    ask http://localhost:8041/cert-validate/{host}
     ca https://acme-staging-v02.api.letsencrypt.org/directory
 }
 
