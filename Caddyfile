@@ -1,12 +1,6 @@
-*.xyz   # Site's address
-
-tls abraham.sibaja@hulilabs.com {
-    ask http://localhost:8041/cert-validate/{host}
-    ca https://acme-staging-v02.api.letsencrypt.org/directory
-}
-
-ext .html   # Clean URLs
-
-errors error.log {       # Error log
-    404 error-404.html   # Custom error page
+:443 {
+    tls abraham.sibaja@hulilabs.com {
+        ask http://localhost:8041/cert-validate/cana.hulilabs.xyz
+        ca https://acme-staging-v02.api.letsencrypt.org/directory
+    }
 }
