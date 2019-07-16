@@ -1,8 +1,13 @@
 :443 {
+    # header http://instance:8041/cert-validate X-Forwarded-Host cana.hulilabs.xyz
+
     tls abraham.sibaja@hulilabs.com {
-        ask http://localhost:8041/cert-validate/cana.hulilabs.xyz
+        ask http://localhost/allowed
         ca https://acme-staging-v02.api.letsencrypt.org/directory
     }
+    
+    proxy /allowed instance:8041/cert-validate {
+        header_upstream X-Forwarded-Host {hostonly}
+        transparent
+    }
 }
-
-http://localhost:8041
