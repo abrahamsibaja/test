@@ -7,11 +7,8 @@ services:
         ports:
             - "80:80"
             - "443:443"
-        environment:
-            - CADDYPATH:/etc/caddycerts
         volumes:
             - ./Caddyfile:/etc/Caddyfile # to mount custom Caddyfile
-            - ./caddy:/etc/caddycerts
 networks:
     default:
         external:
