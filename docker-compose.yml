@@ -2,7 +2,8 @@ version: "2"
 services:
     caddy:
         image: abiosoft/caddy:latest
-        command: -agree
+        environment:
+            - ACME_AGREE=true
         ports:
             - "80:80"
             - "443:443"
