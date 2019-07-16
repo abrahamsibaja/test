@@ -13,14 +13,3 @@ networks:
     default:
         external:
             name: instance_default
-    #     depends_on:
-    #         - instance
-    # instance:
-    #     build: ./instance
-    #     command: ./run.sh build && ./run.sh up
-    #     ports:
-    #         - "8041:8041"
-    #     depends_on:
-    #         - web
-    # web:/
-    #     build: .
