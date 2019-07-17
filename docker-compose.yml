@@ -4,6 +4,7 @@ services:
         image: abiosoft/caddy:latest
         environment:
             - ACME_AGREE=true
+            - ENABLE_TELEMETRY=false
         ports:
             - "80:80"
             - "443:443"
